@@ -15,7 +15,7 @@ class FacebookError(FacepyError):
         self.error_user_msg = error_user_msg
 
         if self.code:
-            message = '[%s] %s' % (self.code, self.message)
+            message = '[%s] %s %s' % (self.code, self.message, self.error_user_msg)
 
         super(FacebookError, self).__init__(message)
 
